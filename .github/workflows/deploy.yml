@@ -79,28 +79,28 @@ jobs:
           echo "API_URL=$API_URL" >> $GITHUB_OUTPUT
           echo "🚀 API deployed to: $API_URL"
 
-        - name: Deploy Swagger UI to S3
-          if: github.ref == 'refs/heads/main'
-          run: |
-            # Hämta bucket från CloudFormation (SwaggerUrl)
-            SWAGGER_URL=$(aws cloudformation describe-stacks \
-              --stack-name todo-serverless-stack \
-              --query "Stacks[0].Outputs[?OutputKey=='SwaggerUrl'].OutputValue" \
-              --output text)
-            
-            # Extrahera bucket-namnet från URL
-            BUCKET_NAME=$(echo $SWAGGER_URL | sed -E 's|https?://([^.]+).*|\1|')
-            
-            echo "📦 Deploying Swagger UI to bucket: $BUCKET_NAME"
-            
-            # Uppdatera swagger-init.js med API URL
-            API_URL="${{ steps.get-url.outputs.API_URL }}"
-            sed -i "s|const API_URL = '.*';|const API_URL = '${API_URL}';|g" swagger-ui/swagger-init.js
-            
-            # Synka till S3
-            aws s3 sync ./swagger-ui/ s3://$BUCKET_NAME/ --delete
-            
-            echo "📄 Swagger UI deployed successfully!"
+      - name: Deploy Swagger UI to S3
+        if: github.ref == 'refs/heads/main'
+        run: |
+          # Hämta bucket från CloudFormation (SwaggerUrl)
+          SWAGGER_URL=$(aws cloudformation describe-stacks \
+            --stack-name todo-serverless-stack \
+            --query "Stacks[0].Outputs[?OutputKey=='SwaggerUrl'].OutputValue" \
+            --output text)
+          
+          # Extrahera bucket-namnet från URL
+          BUCKET_NAME=$(echo $SWAGGER_URL | sed -E 's|https?://([^.]+).*|\1|')
+          
+          echo "📦 Deploying Swagger UI to bucket: $BUCKET_NAME"
+          
+          # Uppdatera swagger-init.js med API URL
+          API_URL="${{ steps.get-url.outputs.API_URL }}"
+          sed -i "s|const API_URL = '.*';|const API_URL = '${API_URL}';|g" swagger-ui/swagger-init.js
+          
+          # Synka till S3
+          aws s3 sync ./swagger-ui/ s3://$BUCKET_NAME/ --delete
+          
+          echo "📄 Swagger UI deployed successfully!"
 
       - name: API Health Check
         if: github.ref == 'refs/heads/main'
