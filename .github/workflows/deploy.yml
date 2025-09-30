@@ -91,14 +91,15 @@ jobs:
           echo "🚀 API deployed to: $API_URL"
       
       # 10. Deploy Swagger UI till S3
-      - name: Deploy Swagger UI to S3
-        if: github.ref == 'refs/heads/main'
-        run: |
-        BUCKET_NAME=$(aws cloudformation describe-stacks \
-          --stack-name todo-serverless-stack \
-          --query "Stacks[0].Outputs[?OutputKey=='DeploymentBucket'].OutputValue" \
-          --output text)
-      
+    - name: Deploy Swagger UI to S3
+      if: github.ref == 'refs/heads/main'
+      run: |
+      # Hämta bucket från CloudFormation
+      BUCKET_NAME=$(aws cloudformation describe-stacks \
+        --stack-name todo-serverless-stack \
+        --query "Stacks[0].Outputs[?OutputKey=='DeploymentBucket'].OutputValue" \
+        --output text)
+
       # Kontrollera att bucket finns
       if [ -z "$BUCKET_NAME" ] || [ "$BUCKET_NAME" == "None" ]; then
         echo "❌ DeploymentBucket finns inte i stacken!"
