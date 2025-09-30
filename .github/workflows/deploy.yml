@@ -5,13 +5,12 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
-  workflow_dispatch:  # Manuell trigger via GitHub UI
+  workflow_dispatch:
 
 env:
   AWS_REGION: eu-west-1
   DOTNET_VERSION: '9.0.x'
 
-# Permissions för OIDC
 permissions:
   id-token: write
   contents: read
@@ -21,52 +20,43 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      
       - name: Debug repo structure
         run: |
           pwd
           ls -R
-      
-      # 1. Checkout kod från GitHub
+
       - name: Checkout code
         uses: actions/checkout@v4
-      
-      # 2. Setup .NET
+
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
-      
-      # 3. Restore och build
+
       - name: Restore dependencies
         run: dotnet restore src/ToDoApi/todo-serverless.csproj
 
       - name: Build
         run: dotnet build src/ToDoApi/todo-serverless.csproj --configuration Release --no-restore
 
-      # 4. Tester (om du har några)
       - name: Run tests
         if: hashFiles('src/ToDoApi.Tests/**') != ''
         run: dotnet test src/ToDoApi.Tests/todo-serverless.Tests.csproj --no-build --verbosity normal
-        
-      # 5. Configure AWS credentials via OIDC
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::506279660688:role/GitHubActionsDeployRole
           aws-region: ${{ env.AWS_REGION }}
-      
-      # 6. Setup AWS SAM CLI
+
       - name: Setup SAM CLI
         uses: aws-actions/setup-sam@v2
         with:
           use-installer: true
-      
-      # 7. Build SAM application
+
       - name: SAM Build
         run: sam build --template-file template.yml
-      
-      # 8. Deploy till AWS (endast på main branch)
+
       - name: SAM Deploy
         if: github.ref == 'refs/heads/main'
         run: |
@@ -77,8 +67,7 @@ jobs:
             --region ${{ env.AWS_REGION }} \
             --capabilities CAPABILITY_IAM \
             --resolve-s3
-      
-      # 9. Hämta API URL från CloudFormation outputs
+
       - name: Get API URL
         if: github.ref == 'refs/heads/main'
         id: get-url
@@ -89,8 +78,7 @@ jobs:
             --output text)
           echo "API_URL=$API_URL" >> $GITHUB_OUTPUT
           echo "🚀 API deployed to: $API_URL"
-      
-      # 10. Deploy Swagger UI till S3
+
       - name: Deploy Swagger UI to S3
         if: github.ref == 'refs/heads/main'
         run: |
@@ -100,33 +88,28 @@ jobs:
             --query "Stacks[0].Outputs[?OutputKey=='DeploymentBucket'].OutputValue" \
             --output text)
 
-      # Kontrollera att bucket finns
-      if [ -z "$BUCKET_NAME" ] || [ "$BUCKET_NAME" == "None" ]; then
-        echo "❌ DeploymentBucket finns inte i stacken!"
-        exit 1
-      fi
-      
-      echo "📦 Deploying Swagger UI to bucket: $BUCKET_NAME"
-      
-      # Uppdatera swagger-init.js med API URL
-      API_URL="${{ steps.get-url.outputs.API_URL }}"
-      sed -i "s|const API_URL = '.*';|const API_URL = '${API_URL}';|g" swagger-ui/swagger-init.js
-      
-      # Synka till S3
-      aws s3 sync ./swagger-ui/ s3://$BUCKET_NAME/ --delete
-      
-      echo "📄 Swagger UI deployed successfully!"
-      
-      # 11. Smoke test
+          # Kontrollera att bucket finns
+          if [ -z "$BUCKET_NAME" ] || [ "$BUCKET_NAME" == "None" ]; then
+            echo "❌ DeploymentBucket finns inte i stacken!"
+            exit 1
+          fi
+          
+          echo "📦 Deploying Swagger UI to bucket: $BUCKET_NAME"
+          
+          # Uppdatera swagger-init.js med API URL
+          API_URL="${{ steps.get-url.outputs.API_URL }}"
+          sed -i "s|const API_URL = '.*';|const API_URL = '${API_URL}';|g" swagger-ui/swagger-init.js
+          
+          # Synka till S3
+          aws s3 sync ./swagger-ui/ s3://$BUCKET_NAME/ --delete
+          
+          echo "📄 Swagger UI deployed successfully!"
+
       - name: API Health Check
         if: github.ref == 'refs/heads/main'
         run: |
           API_URL="${{ steps.get-url.outputs.API_URL }}"
-          
-          # Vänta 10 sekunder för att API ska bli tillgängligt
           sleep 10
-          
-          # Test API endpoint
           HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" ${API_URL}api/todos)
           
           if [ $HTTP_STATUS -eq 200 ] || [ $HTTP_STATUS -eq 404 ]; then
