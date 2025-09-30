@@ -8,7 +8,7 @@ namespace todo_serverless.Models;
 public class TodoTask
 {
     // Primary key i DynamoDB - genererar automatiskt nytt GUID
-    [DynamoDBHashKey] public string Id { get; set; } = Guid.NewGuid().ToString();
+    [DynamoDBHashKey("id")] public string Id { get; set; } = Guid.NewGuid().ToString();
 
     public string Title { get; set; } = string.Empty;
     public string? Description { get; set; }
