@@ -93,12 +93,20 @@ jobs:
           
           echo "📦 Deploying Swagger UI to bucket: $BUCKET_NAME"
           
-          # Uppdatera swagger-init.js med API URL
+          # Uppdatera swagger-initializer.js med API URL
           API_URL="${{ steps.get-url.outputs.API_URL }}"
-          sed -i "s|const API_URL = '.*';|const API_URL = '${API_URL}';|g" swagger-ui/swagger-init.js
-          
-          # Synka till S3
-          aws s3 sync ./swagger-ui/ s3://$BUCKET_NAME/ --delete
+          sed -i "s|const API_URL = '.*';|const API_URL = '${API_URL}';|g" swagger-ui/swagger-initializer.js
+
+          # Synka till S3 med rätt content-types
+          aws s3 sync ./swagger-ui/ s3://$BUCKET_NAME/ --delete \
+            --content-type "text/html" \
+            --exclude "*" \
+            --include "*.html"
+
+          aws s3 sync ./swagger-ui/ s3://$BUCKET_NAME/ --delete \
+            --content-type "application/javascript" \
+            --exclude "*" \
+            --include "*.js"
           
           echo "📄 Swagger UI deployed successfully!"
 
@@ -107,7 +115,7 @@ jobs:
         run: |
           API_URL="${{ steps.get-url.outputs.API_URL }}"
           sleep 10
-          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" ${API_URL}api/todos)
+          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" ${API_URL}todos)
           
           if [ $HTTP_STATUS -eq 200 ] || [ $HTTP_STATUS -eq 404 ]; then
             echo "✅ API is responding (HTTP $HTTP_STATUS)"

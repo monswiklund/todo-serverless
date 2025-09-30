@@ -4,7 +4,7 @@ Description: Serverless TODO API
 
 Globals:
   Function:
-    Timeout: 30
+    Timeout: 60
     MemorySize: 512
     Runtime: dotnet8
     Environment:
@@ -32,17 +32,21 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       FunctionName: TodoApiFunction
-      Handler: TodoApi::TodoApi.LambdaEntryPoint::FunctionHandlerAsync
-      CodeUri: ./publish/
+      Handler: todo-serverless::todo_serverless.LambdaEntryPoint::FunctionHandlerAsync
+      CodeUri: ./src/ToDoApi/
       Policies:
         - DynamoDBCrudPolicy:
             TableName: !Ref TodoTable
       Events:
         ApiEvent:
-          Type: Api
+          Type: HttpApi
           Properties:
             Path: /{proxy+}
             Method: ANY
+    Metadata:
+      BuildMethod: dotnet8
+      BuildProperties:
+        Configuration: Release
 
   # S3 Bucket för Swagger UI
   SwaggerBucket:

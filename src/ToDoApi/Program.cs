@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.OpenApi;
 using Serilog;
 using todo_serverless.Models;
-using todo_serverless.wwwroot.Services;
+using todo_serverless.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -170,3 +170,6 @@ app.MapGet("/health", async () =>
 
 // Explicit IPv4 binding för ALB health checks
 app.Run();
+
+// Lambda hosting support
+public partial class Program { }

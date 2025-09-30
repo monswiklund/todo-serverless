@@ -2,7 +2,7 @@ using Amazon.DynamoDBv2.DataModel;
 using Microsoft.Extensions.Logging;
 using todo_serverless.Models;
 
-namespace todo_serverless.wwwroot.Services;
+namespace todo_serverless.Services;
 
 public class TaskService
 {
@@ -23,7 +23,7 @@ public class TaskService
         {
             var config = new DynamoDBOperationConfig
             {
-                OverrideTableName = "Tasks"
+                OverrideTableName = "TodoTable"
             };
 
             var scan = _context.ScanAsync<TodoTask>(new List<ScanCondition>(), config);
@@ -47,7 +47,7 @@ public class TaskService
         {
             var config = new DynamoDBOperationConfig
             {
-                OverrideTableName = "Tasks"
+                OverrideTableName = "TodoTable"
             };
             var task = await _context.LoadAsync<TodoTask>(id, config);
 
@@ -73,7 +73,7 @@ public class TaskService
         {
             var config = new DynamoDBOperationConfig
             {
-                OverrideTableName = "Tasks"
+                OverrideTableName = "TodoTable"
             };
             await _context.SaveAsync(newTask, config);
 
@@ -95,7 +95,7 @@ public class TaskService
         {
             var config = new DynamoDBOperationConfig
             {
-                OverrideTableName = "Tasks"
+                OverrideTableName = "TodoTable"
             };
             await _context.SaveAsync(updatedTasks, config);
 
@@ -116,7 +116,7 @@ public class TaskService
         {
             var config = new DynamoDBOperationConfig
             {
-                OverrideTableName = "Tasks"
+                OverrideTableName = "TodoTable"
             };
             await _context.DeleteAsync<TodoTask>(id, config);
 

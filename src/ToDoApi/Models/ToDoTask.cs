@@ -4,7 +4,7 @@ using Amazon.DynamoDBv2.DataModel;
 namespace todo_serverless.Models;
 
 
-[DynamoDBTable("Tasks")]
+[DynamoDBTable("TodoTable")]
 public class TodoTask
 {
     // Primary key i DynamoDB - genererar automatiskt nytt GUID
