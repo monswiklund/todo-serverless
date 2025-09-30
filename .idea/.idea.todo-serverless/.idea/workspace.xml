@@ -108,7 +108,7 @@
       <option name="presentableId" value="Default" />
       <updated>1759229827652</updated>
       <workItem from="1759229828778" duration="454000" />
-      <workItem from="1759230714741" duration="3242000" />
+      <workItem from="1759230714741" duration="3349000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit of todo-serverless application with basic CRUD functionality and AWS integration">
       <option name="closed" value="true" />
@@ -174,7 +174,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759235791806</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Update deployment workflow to use todo-serverless project files">
+      <option name="closed" value="true" />
+      <created>1759235834892</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1759235834892</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,7 +200,8 @@
     <MESSAGE value="Remove redundant build and test steps from GitHub Actions workflow" />
     <MESSAGE value="Add build and test steps to GitHub Actions workflow for .NET project" />
     <MESSAGE value="Add .gitignore file to exclude IDE and build artifacts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add .gitignore file to exclude IDE and build artifacts" />
+    <MESSAGE value="Update deployment workflow to use todo-serverless project files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update deployment workflow to use todo-serverless project files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
