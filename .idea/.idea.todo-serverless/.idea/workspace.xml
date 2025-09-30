@@ -8,8 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38973465-444e-4de3-87cf-338ceadc25d2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.todo-serverless/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.todo-serverless/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoApi/LambdaEntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/LambdaEntryPoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template.yml" beforeDir="false" afterPath="$PROJECT_DIR$/template.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,11 +42,11 @@
   }
 }]]></component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/github-actions-trust-policy.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/github-actions-trust-policy.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/permissions-policy.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/permissions-policy.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/src/ToDoApi/LambdaEntryPoint.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/src/ToDoApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/src/ToDoApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/ToDoApi/obj/project.assets.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/src/ToDoApi/obj/project.assets.json" root0="FORCE_HIGHLIGHTING" />
@@ -115,7 +114,7 @@
       <option name="presentableId" value="Default" />
       <updated>1759229827652</updated>
       <workItem from="1759229828778" duration="454000" />
-      <workItem from="1759230714741" duration="9003000" />
+      <workItem from="1759230714741" duration="9312000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit of todo-serverless application with basic CRUD functionality and AWS integration">
       <option name="closed" value="true" />
@@ -381,7 +380,23 @@
       <option name="project" value="LOCAL" />
       <updated>1759241479317</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Remove unused Init method in LambdaEntryPoint and update workspace.xml for task tracking">
+      <option name="closed" value="true" />
+      <created>1759241620478</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1759241620478</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Fix comment formatting for explicit IPv4 binding in Program.cs">
+      <option name="closed" value="true" />
+      <created>1759241749125</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1759241749125</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -391,8 +406,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Add debug step to GitHub Actions workflow for repo structure verification" />
-    <MESSAGE value="Remove redundant build and test steps from GitHub Actions workflow" />
     <MESSAGE value="Add build and test steps to GitHub Actions workflow for .NET project" />
     <MESSAGE value="Add .gitignore file to exclude IDE and build artifacts" />
     <MESSAGE value="Update deployment workflow to use todo-serverless project files" />
@@ -416,7 +429,9 @@
     <MESSAGE value="Update Microsoft.AspNetCore.OpenApi package to version 8.0.20 and configure Swagger services" />
     <MESSAGE value="Update CodeUri in template.yml to point to ./publish/ for deployment" />
     <MESSAGE value="Refactor deployment configuration and update API integration for Swagger UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor deployment configuration and update API integration for Swagger UI" />
+    <MESSAGE value="Remove unused Init method in LambdaEntryPoint and update workspace.xml for task tracking" />
+    <MESSAGE value="Fix comment formatting for explicit IPv4 binding in Program.cs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix comment formatting for explicit IPv4 binding in Program.cs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -79,6 +79,33 @@ jobs:
           echo "API_URL=$API_URL" >> $GITHUB_OUTPUT
           echo "🚀 API deployed to: $API_URL"
 
+      - name: Deploy TODO App to S3
+        if: github.ref == 'refs/heads/main'
+        run: |
+          # Hämta TODO App bucket URL från CloudFormation
+          TODO_APP_URL=$(aws cloudformation describe-stacks \
+            --stack-name todo-serverless-stack \
+            --query "Stacks[0].Outputs[?OutputKey=='TodoAppUrl'].OutputValue" \
+            --output text)
+
+          # Extrahera bucket-namnet från URL
+          TODO_BUCKET=$(echo $TODO_APP_URL | sed -E 's|https?://([^.]+).*|\1|')
+
+          echo "📦 Deploying TODO App to bucket: $TODO_BUCKET"
+
+          # Uppdatera index.html med API URL
+          API_URL="${{ steps.get-url.outputs.API_URL }}"
+          sed -i "s|const API_URL = \".*\";|const API_URL = \"${API_URL}\";|g" todo-app/index.html
+
+          # Synka till S3 med rätt content-types
+          aws s3 sync ./todo-app/ s3://$TODO_BUCKET/ --delete \
+            --content-type "text/html" \
+            --exclude "*" \
+            --include "*.html"
+
+          echo "✅ TODO App deployed successfully!"
+          echo "🌐 TODO App URL: $TODO_APP_URL"
+
       - name: Deploy Swagger UI to S3
         if: github.ref == 'refs/heads/main'
         run: |
@@ -87,28 +114,29 @@ jobs:
             --stack-name todo-serverless-stack \
             --query "Stacks[0].Outputs[?OutputKey=='SwaggerUrl'].OutputValue" \
             --output text)
-          
+
           # Extrahera bucket-namnet från URL
-          BUCKET_NAME=$(echo $SWAGGER_URL | sed -E 's|https?://([^.]+).*|\1|')
-          
-          echo "📦 Deploying Swagger UI to bucket: $BUCKET_NAME"
-          
+          SWAGGER_BUCKET=$(echo $SWAGGER_URL | sed -E 's|https?://([^.]+).*|\1|')
+
+          echo "📦 Deploying Swagger UI to bucket: $SWAGGER_BUCKET"
+
           # Uppdatera swagger-initializer.js med API URL
           API_URL="${{ steps.get-url.outputs.API_URL }}"
           sed -i "s|const API_URL = '.*';|const API_URL = '${API_URL}';|g" swagger-ui/swagger-initializer.js
 
           # Synka till S3 med rätt content-types
-          aws s3 sync ./swagger-ui/ s3://$BUCKET_NAME/ --delete \
+          aws s3 sync ./swagger-ui/ s3://$SWAGGER_BUCKET/ --delete \
             --content-type "text/html" \
             --exclude "*" \
             --include "*.html"
 
-          aws s3 sync ./swagger-ui/ s3://$BUCKET_NAME/ --delete \
+          aws s3 sync ./swagger-ui/ s3://$SWAGGER_BUCKET/ --delete \
             --content-type "application/javascript" \
             --exclude "*" \
             --include "*.js"
-          
+
           echo "📄 Swagger UI deployed successfully!"
+          echo "🌐 Swagger URL: $SWAGGER_URL"
 
       - name: API Health Check
         if: github.ref == 'refs/heads/main'

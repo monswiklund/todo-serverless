@@ -1,5 +1,4 @@
-﻿using System.Threading.RateLimiting;
-using Amazon.DynamoDBv2;
+﻿using Amazon.DynamoDBv2;
 using Amazon.DynamoDBv2.DataModel;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
@@ -24,30 +23,7 @@ builder.Host.UseSerilog((context, services, configuration) =>
 
 
 
-// Rate limiting - 100 requests per minut per IP
-builder.Services.AddRateLimiter(options =>
-{
-    options.GlobalLimiter = PartitionedRateLimiter.Create<HttpContext, string>(context =>
-        RateLimitPartition.GetFixedWindowLimiter(
-            partitionKey: context.Connection.RemoteIpAddress?.ToString() ?? "unknown",
-            factory: _ => new FixedWindowRateLimiterOptions
-            {
-                Window = TimeSpan.FromMinutes(1),
-                PermitLimit = 100,
-                QueueProcessingOrder = System.Threading.RateLimiting.QueueProcessingOrder.OldestFirst,
-                QueueLimit = 10
-            }));
-
-    options.OnRejected = async (context, token) =>
-    {
-        context.HttpContext.Response.StatusCode = StatusCodes.Status429TooManyRequests;
-        await context.HttpContext.Response.WriteAsJsonAsync(new
-        {
-            error = "Rate limit exceeded. Please try again later.",
-            retryAfter = "60 seconds"
-        }, cancellationToken: token);
-    };
-});
+// Rate limiting removed - use API Gateway throttling instead for Lambda
 
 // AWS services setup
 builder.Services.AddAWSService<IAmazonDynamoDB>();
@@ -71,17 +47,21 @@ var app = builder.Build();
 // Serilog request logging
 app.UseSerilogRequestLogging();
 
-// Aktivera rate limiting
-app.UseRateLimiter();
-
+// Swagger JSON only (UI is on S3)
 app.UseSwagger();
-app.UseSwaggerUI(options => { options.SwaggerEndpoint("/openapi/v1.json", "v1"); });
 
-// Serve static files från wwwroot
-app.UseStaticFiles();
-
-// Serve startpage istället för redirect
-app.MapGet("/", () => Results.File("~/index.html", "text/html"));
+// Root endpoint - returns API info
+app.MapGet("/", () => Results.Ok(new
+{
+    api = "TODO Serverless API",
+    version = "1.0",
+    endpoints = new
+    {
+        todos = "/todos",
+        swagger = "/swagger/v1/swagger.json",
+        health = "/health"
+    }
+}));
 
 // Hämta alla todos med optional pagination
 app.MapGet("/todos", async (TaskService taskService, int? limit) =>

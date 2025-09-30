@@ -48,6 +48,31 @@ Resources:
       BuildProperties:
         Configuration: Release
 
+  # S3 Bucket för TODO App Frontend
+  TodoAppBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub 'todo-app-${AWS::AccountId}'
+      WebsiteConfiguration:
+        IndexDocument: index.html
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: false
+        BlockPublicPolicy: false
+        IgnorePublicAcls: false
+        RestrictPublicBuckets: false
+
+  # S3 Bucket Policy för TODO App
+  TodoAppBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref TodoAppBucket
+      PolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal: '*'
+            Action: 's3:GetObject'
+            Resource: !Sub '${TodoAppBucket.Arn}/*'
+
   # S3 Bucket för Swagger UI
   SwaggerBucket:
     Type: AWS::S3::Bucket
@@ -61,7 +86,7 @@ Resources:
         IgnorePublicAcls: false
         RestrictPublicBuckets: false
 
-  # S3 Bucket Policy (tillåt public read)
+  # S3 Bucket Policy för Swagger UI
   SwaggerBucketPolicy:
     Type: AWS::S3::BucketPolicy
     Properties:
@@ -76,8 +101,12 @@ Resources:
 Outputs:
   ApiUrl:
     Description: "API Gateway endpoint URL"
-    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/"
-  
+    Value: !Sub "https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com/"
+
+  TodoAppUrl:
+    Description: "TODO App URL"
+    Value: !GetAtt TodoAppBucket.WebsiteURL
+
   SwaggerUrl:
     Description: "Swagger UI URL"
     Value: !GetAtt SwaggerBucket.WebsiteURL

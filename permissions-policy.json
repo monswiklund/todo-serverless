@@ -75,6 +75,25 @@
       ]
     },
     {
+      "Sid": "S3TodoAppBucketAccess",
+      "Effect": "Allow",
+      "Action": [
+        "s3:CreateBucket",
+        "s3:ListBucket",
+        "s3:GetObject",
+        "s3:PutObject",
+        "s3:DeleteObject",
+        "s3:PutBucketWebsite",
+        "s3:PutBucketPolicy",
+        "s3:GetBucketPolicy",
+        "s3:PutPublicAccessBlock"
+      ],
+      "Resource": [
+        "arn:aws:s3:::todo-app-506279660688",
+        "arn:aws:s3:::todo-app-506279660688/*"
+      ]
+    },
+    {
       "Sid": "S3SwaggerBucketAccess",
       "Effect": "Allow",
       "Action": [
