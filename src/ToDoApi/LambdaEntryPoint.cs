@@ -41,9 +41,23 @@ public class LambdaEntryPoint : APIGatewayHttpApiV2ProxyFunction
                 services.AddScoped<TaskService>();
                 services.AddEndpointsApiExplorer();
                 services.AddSwaggerGen();
+
+                // CORS för att tillåta frontend att anropa API:t
+                services.AddCors(options =>
+                {
+                    options.AddDefaultPolicy(builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                               .AllowAnyMethod()
+                               .AllowAnyHeader();
+                    });
+                });
             })
             .Configure(app =>
             {
+                // CORS måste vara före routing
+                app.UseCors();
+
                 // Swagger
                 app.UseSwagger();
 
