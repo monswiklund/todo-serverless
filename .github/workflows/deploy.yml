@@ -82,14 +82,17 @@ jobs:
       - name: Deploy TODO App to S3
         if: github.ref == 'refs/heads/main'
         run: |
-          # Hämta TODO App bucket URL från CloudFormation
+          # Hämta bucket-namnet direkt från CloudFormation
+          TODO_BUCKET=$(aws cloudformation describe-stacks \
+            --stack-name todo-serverless-stack \
+            --query "Stacks[0].Outputs[?OutputKey=='TodoAppBucketName'].OutputValue" \
+            --output text)
+
+          # Hämta CloudFront URL för användare
           TODO_APP_URL=$(aws cloudformation describe-stacks \
             --stack-name todo-serverless-stack \
             --query "Stacks[0].Outputs[?OutputKey=='TodoAppUrl'].OutputValue" \
             --output text)
-
-          # Extrahera bucket-namnet från URL
-          TODO_BUCKET=$(echo $TODO_APP_URL | sed -E 's|https?://([^.]+).*|\1|')
 
           echo "📦 Deploying TODO App to bucket: $TODO_BUCKET"
 
@@ -109,14 +112,17 @@ jobs:
       - name: Deploy Swagger UI to S3
         if: github.ref == 'refs/heads/main'
         run: |
-          # Hämta bucket från CloudFormation (SwaggerUrl)
+          # Hämta bucket-namnet direkt från CloudFormation
+          SWAGGER_BUCKET=$(aws cloudformation describe-stacks \
+            --stack-name todo-serverless-stack \
+            --query "Stacks[0].Outputs[?OutputKey=='SwaggerBucketName'].OutputValue" \
+            --output text)
+
+          # Hämta CloudFront URL för användare
           SWAGGER_URL=$(aws cloudformation describe-stacks \
             --stack-name todo-serverless-stack \
             --query "Stacks[0].Outputs[?OutputKey=='SwaggerUrl'].OutputValue" \
             --output text)
-
-          # Extrahera bucket-namnet från URL
-          SWAGGER_BUCKET=$(echo $SWAGGER_URL | sed -E 's|https?://([^.]+).*|\1|')
 
           echo "📦 Deploying Swagger UI to bucket: $SWAGGER_BUCKET"
 

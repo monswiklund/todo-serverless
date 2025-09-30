@@ -195,9 +195,17 @@ Outputs:
     Description: "TODO App CloudFront URL"
     Value: !Sub "https://${TodoAppDistribution.DomainName}"
 
+  TodoAppBucketName:
+    Description: "TODO App S3 Bucket Name"
+    Value: !Ref TodoAppBucket
+
   SwaggerUrl:
     Description: "Swagger UI CloudFront URL"
     Value: !Sub "https://${SwaggerDistribution.DomainName}"
+
+  SwaggerBucketName:
+    Description: "Swagger UI S3 Bucket Name"
+    Value: !Ref SwaggerBucket
 
   TodoAppDistributionId:
     Description: "TODO App CloudFront Distribution ID"

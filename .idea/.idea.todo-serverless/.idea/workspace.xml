@@ -7,7 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38973465-444e-4de3-87cf-338ceadc25d2" name="Changes" comment="" />
+    <list default="true" id="38973465-444e-4de3-87cf-338ceadc25d2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.todo-serverless/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.todo-serverless/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,7 +116,7 @@
       <option name="presentableId" value="Default" />
       <updated>1759229827652</updated>
       <workItem from="1759229828778" duration="454000" />
-      <workItem from="1759230714741" duration="10890000" />
+      <workItem from="1759230714741" duration="11552000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit of todo-serverless application with basic CRUD functionality and AWS integration">
       <option name="closed" value="true" />
@@ -436,7 +438,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759243374770</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Enhance S3 bucket configurations and add CloudFront distributions for TODO App and Swagger UI">
+      <option name="closed" value="true" />
+      <created>1759243671349</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1759243671349</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -446,7 +456,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Fix SAM build template file reference in deployment workflow" />
     <MESSAGE value="Fix case sensitivity in CodeUri path for TodoApi function" />
     <MESSAGE value="Add permissions and trust policy JSON files for AWS role configuration" />
     <MESSAGE value="Enhance deployment workflow by validating S3 bucket existence and updating Swagger UI deployment process" />
@@ -471,7 +480,8 @@
     <MESSAGE value="Implement CRUD operations and Swagger integration in LambdaEntryPoint" />
     <MESSAGE value="Add CORS support to allow frontend API access in LambdaEntryPoint" />
     <MESSAGE value="Add AWS SAM directory to .gitignore and update workspace.xml for task tracking" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add AWS SAM directory to .gitignore and update workspace.xml for task tracking" />
+    <MESSAGE value="Enhance S3 bucket configurations and add CloudFront distributions for TODO App and Swagger UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Enhance S3 bucket configurations and add CloudFront distributions for TODO App and Swagger UI" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
