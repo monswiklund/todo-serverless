@@ -10,10 +10,6 @@
     <list default="true" id="38973465-444e-4de3-87cf-338ceadc25d2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.todo-serverless/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.todo-serverless/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ToDoApi/LambdaEntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/LambdaEntryPoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoApi/Models/ToDoTask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/Models/ToDoTask.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoApi/wwwroot/Services/TaskService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template.yml" beforeDir="false" afterPath="$PROJECT_DIR$/template.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +115,7 @@
       <option name="presentableId" value="Default" />
       <updated>1759229827652</updated>
       <workItem from="1759229828778" duration="454000" />
-      <workItem from="1759230714741" duration="8715000" />
+      <workItem from="1759230714741" duration="9003000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit of todo-serverless application with basic CRUD functionality and AWS integration">
       <option name="closed" value="true" />
@@ -377,7 +373,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759240869066</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Refactor deployment configuration and update API integration for Swagger UI">
+      <option name="closed" value="true" />
+      <created>1759241479317</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1759241479317</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,7 +391,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Update title in index.html to reflect testing phase" />
     <MESSAGE value="Add debug step to GitHub Actions workflow for repo structure verification" />
     <MESSAGE value="Remove redundant build and test steps from GitHub Actions workflow" />
     <MESSAGE value="Add build and test steps to GitHub Actions workflow for .NET project" />
@@ -412,7 +415,8 @@
     <MESSAGE value="Update package references to version 8.0.x for compatibility" />
     <MESSAGE value="Update Microsoft.AspNetCore.OpenApi package to version 8.0.20 and configure Swagger services" />
     <MESSAGE value="Update CodeUri in template.yml to point to ./publish/ for deployment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update CodeUri in template.yml to point to ./publish/ for deployment" />
+    <MESSAGE value="Refactor deployment configuration and update API integration for Swagger UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor deployment configuration and update API integration for Swagger UI" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
