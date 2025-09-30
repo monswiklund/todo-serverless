@@ -1,0 +1,61 @@
+{
+  "version": 2,
+  "dgSpecHash": "Cx84CIEBNUo=",
+  "success": false,
+  "projectFilePath": "/Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/src/ToDoApi/todo-serverless.csproj",
+  "expectedPackageFiles": [
+    "/Users/mans/.nuget/packages/amazon.lambda.apigatewayevents/2.7.1/amazon.lambda.apigatewayevents.2.7.1.nupkg.sha512",
+    "/Users/mans/.nuget/packages/amazon.lambda.applicationloadbalancerevents/2.2.0/amazon.lambda.applicationloadbalancerevents.2.2.0.nupkg.sha512",
+    "/Users/mans/.nuget/packages/amazon.lambda.aspnetcoreserver/9.0.4/amazon.lambda.aspnetcoreserver.9.0.4.nupkg.sha512",
+    "/Users/mans/.nuget/packages/amazon.lambda.aspnetcoreserver.hosting/1.7.4/amazon.lambda.aspnetcoreserver.hosting.1.7.4.nupkg.sha512",
+    "/Users/mans/.nuget/packages/amazon.lambda.core/2.2.0/amazon.lambda.core.2.2.0.nupkg.sha512",
+    "/Users/mans/.nuget/packages/amazon.lambda.logging.aspnetcore/3.1.1/amazon.lambda.logging.aspnetcore.3.1.1.nupkg.sha512",
+    "/Users/mans/.nuget/packages/amazon.lambda.runtimesupport/1.12.3/amazon.lambda.runtimesupport.1.12.3.nupkg.sha512",
+    "/Users/mans/.nuget/packages/amazon.lambda.serialization.systemtextjson/2.4.4/amazon.lambda.serialization.systemtextjson.2.4.4.nupkg.sha512",
+    "/Users/mans/.nuget/packages/awssdk.core/4.0.0.30/awssdk.core.4.0.0.30.nupkg.sha512",
+    "/Users/mans/.nuget/packages/awssdk.dynamodbv2/4.0.6.4/awssdk.dynamodbv2.4.0.6.4.nupkg.sha512",
+    "/Users/mans/.nuget/packages/awssdk.extensions.netcore.setup/4.0.3.2/awssdk.extensions.netcore.setup.4.0.3.2.nupkg.sha512",
+    "/Users/mans/.nuget/packages/microsoft.aspnetcore.openapi/9.0.9/microsoft.aspnetcore.openapi.9.0.9.nupkg.sha512",
+    "/Users/mans/.nuget/packages/microsoft.extensions.apidescription.server/9.0.0/microsoft.extensions.apidescription.server.9.0.0.nupkg.sha512",
+    "/Users/mans/.nuget/packages/microsoft.extensions.configuration.abstractions/9.0.0/microsoft.extensions.configuration.abstractions.9.0.0.nupkg.sha512",
+    "/Users/mans/.nuget/packages/microsoft.extensions.configuration.binder/9.0.0/microsoft.extensions.configuration.binder.9.0.0.nupkg.sha512",
+    "/Users/mans/.nuget/packages/microsoft.extensions.dependencyinjection/9.0.0/microsoft.extensions.dependencyinjection.9.0.0.nupkg.sha512",
+    "/Users/mans/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.0/microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512",
+    "/Users/mans/.nuget/packages/microsoft.extensions.dependencymodel/9.0.0/microsoft.extensions.dependencymodel.9.0.0.nupkg.sha512",
+    "/Users/mans/.nuget/packages/microsoft.extensions.diagnostics.abstractions/9.0.0/microsoft.extensions.diagnostics.abstractions.9.0.0.nupkg.sha512",
+    "/Users/mans/.nuget/packages/microsoft.extensions.fileproviders.abstractions/9.0.0/microsoft.extensions.fileproviders.abstractions.9.0.0.nupkg.sha512",
+    "/Users/mans/.nuget/packages/microsoft.extensions.hosting.abstractions/9.0.0/microsoft.extensions.hosting.abstractions.9.0.0.nupkg.sha512",
+    "/Users/mans/.nuget/packages/microsoft.extensions.logging/9.0.0/microsoft.extensions.logging.9.0.0.nupkg.sha512",
+    "/Users/mans/.nuget/packages/microsoft.extensions.logging.abstractions/9.0.0/microsoft.extensions.logging.abstractions.9.0.0.nupkg.sha512",
+    "/Users/mans/.nuget/packages/microsoft.extensions.options/9.0.0/microsoft.extensions.options.9.0.0.nupkg.sha512",
+    "/Users/mans/.nuget/packages/microsoft.extensions.primitives/9.0.0/microsoft.extensions.primitives.9.0.0.nupkg.sha512",
+    "/Users/mans/.nuget/packages/microsoft.openapi/1.6.25/microsoft.openapi.1.6.25.nupkg.sha512",
+    "/Users/mans/.nuget/packages/serilog/4.2.0/serilog.4.2.0.nupkg.sha512",
+    "/Users/mans/.nuget/packages/serilog.aspnetcore/9.0.0/serilog.aspnetcore.9.0.0.nupkg.sha512",
+    "/Users/mans/.nuget/packages/serilog.extensions.hosting/9.0.0/serilog.extensions.hosting.9.0.0.nupkg.sha512",
+    "/Users/mans/.nuget/packages/serilog.extensions.logging/9.0.0/serilog.extensions.logging.9.0.0.nupkg.sha512",
+    "/Users/mans/.nuget/packages/serilog.formatting.compact/3.0.0/serilog.formatting.compact.3.0.0.nupkg.sha512",
+    "/Users/mans/.nuget/packages/serilog.settings.configuration/9.0.0/serilog.settings.configuration.9.0.0.nupkg.sha512",
+    "/Users/mans/.nuget/packages/serilog.sinks.console/6.0.0/serilog.sinks.console.6.0.0.nupkg.sha512",
+    "/Users/mans/.nuget/packages/serilog.sinks.debug/3.0.0/serilog.sinks.debug.3.0.0.nupkg.sha512",
+    "/Users/mans/.nuget/packages/serilog.sinks.file/6.0.0/serilog.sinks.file.6.0.0.nupkg.sha512",
+    "/Users/mans/.nuget/packages/snapshotrestore.registry/1.0.1/snapshotrestore.registry.1.0.1.nupkg.sha512",
+    "/Users/mans/.nuget/packages/swashbuckle.aspnetcore/9.0.5/swashbuckle.aspnetcore.9.0.5.nupkg.sha512",
+    "/Users/mans/.nuget/packages/swashbuckle.aspnetcore.swagger/9.0.5/swashbuckle.aspnetcore.swagger.9.0.5.nupkg.sha512",
+    "/Users/mans/.nuget/packages/swashbuckle.aspnetcore.swaggergen/9.0.5/swashbuckle.aspnetcore.swaggergen.9.0.5.nupkg.sha512",
+    "/Users/mans/.nuget/packages/swashbuckle.aspnetcore.swaggerui/9.0.5/swashbuckle.aspnetcore.swaggerui.9.0.5.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Warning As Error: Detected package downgrade: Amazon.Lambda.Core from 2.5.0 to 2.2.0. Reference the package directly from the project to select a different version. \n todo-serverless -> Amazon.Lambda.AspNetCoreServer.Hosting 1.7.4 -> Amazon.Lambda.Core (>= 2.5.0) \n todo-serverless -> Amazon.Lambda.Core (>= 2.2.0)",
+      "projectPath": "/Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/src/ToDoApi/todo-serverless.csproj",
+      "filePath": "/Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/src/ToDoApi/todo-serverless.csproj",
+      "libraryId": "Amazon.Lambda.Core",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
+}
