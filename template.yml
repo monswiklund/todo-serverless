@@ -33,7 +33,7 @@ Resources:
     Properties:
       FunctionName: TodoApiFunction
       Handler: TodoApi::TodoApi.LambdaEntryPoint::FunctionHandlerAsync
-      CodeUri: ./src/TodoApi/
+      CodeUri: ./src/ToDoApi/
       Policies:
         - DynamoDBCrudPolicy:
             TableName: !Ref TodoTable
