@@ -8,9 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38973465-444e-4de3-87cf-338ceadc25d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/permissions-policy.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trust-policy.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.todo-serverless/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.todo-serverless/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToDoApi/todo-serverless.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/todo-serverless.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +46,7 @@
     <setting file="file://$PROJECT_DIR$/github-actions-trust-policy.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/github-actions-trust-policy.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/permissions-policy.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/permissions-policy.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/src/ToDoApi/LambdaEntryPoint.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/trust-policy.json" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -112,7 +112,7 @@
       <option name="presentableId" value="Default" />
       <updated>1759229827652</updated>
       <workItem from="1759229828778" duration="454000" />
-      <workItem from="1759230714741" duration="4770000" />
+      <workItem from="1759230714741" duration="7123000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit of todo-serverless application with basic CRUD functionality and AWS integration">
       <option name="closed" value="true" />
@@ -218,7 +218,79 @@
       <option name="project" value="LOCAL" />
       <updated>1759236939167</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add permissions and trust policy JSON files for AWS role configuration">
+      <option name="closed" value="true" />
+      <created>1759237478240</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1759237478240</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Enhance deployment workflow by validating S3 bucket existence and updating Swagger UI deployment process">
+      <option name="closed" value="true" />
+      <created>1759238508215</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1759238508215</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Refactor deployment script to streamline S3 bucket retrieval process">
+      <option name="closed" value="true" />
+      <created>1759238634863</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1759238634863</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Improve Swagger UI deployment step by adding comments for clarity">
+      <option name="closed" value="true" />
+      <created>1759238736686</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1759238736686</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Refactor Swagger UI deployment step for improved readability">
+      <option name="closed" value="true" />
+      <created>1759238804742</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1759238804742</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Refactor deployment script for improved readability and formatting">
+      <option name="closed" value="true" />
+      <created>1759238894492</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1759238894492</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Refactor deployment script for improved clarity and organization">
+      <option name="closed" value="true" />
+      <created>1759239002394</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1759239002394</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Refactor Swagger UI deployment step to retrieve bucket name from SwaggerUrl and improve clarity">
+      <option name="closed" value="true" />
+      <created>1759239478099</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1759239478099</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Refactor Swagger UI deployment step for improved readability">
+      <option name="closed" value="true" />
+      <created>1759239521809</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1759239521809</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,7 +313,15 @@
     <MESSAGE value="Update AWS role ARN in deployment workflow for correct permissions" />
     <MESSAGE value="Fix SAM build template file reference in deployment workflow" />
     <MESSAGE value="Fix case sensitivity in CodeUri path for TodoApi function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix case sensitivity in CodeUri path for TodoApi function" />
+    <MESSAGE value="Add permissions and trust policy JSON files for AWS role configuration" />
+    <MESSAGE value="Enhance deployment workflow by validating S3 bucket existence and updating Swagger UI deployment process" />
+    <MESSAGE value="Refactor deployment script to streamline S3 bucket retrieval process" />
+    <MESSAGE value="Improve Swagger UI deployment step by adding comments for clarity" />
+    <MESSAGE value="Refactor deployment script for improved readability and formatting" />
+    <MESSAGE value="Refactor deployment script for improved clarity and organization" />
+    <MESSAGE value="Refactor Swagger UI deployment step to retrieve bucket name from SwaggerUrl and improve clarity" />
+    <MESSAGE value="Refactor Swagger UI deployment step for improved readability" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor Swagger UI deployment step for improved readability" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
