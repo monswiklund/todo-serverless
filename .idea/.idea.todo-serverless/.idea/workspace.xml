@@ -9,7 +9,6 @@
   <component name="ChangeListManager">
     <list default="true" id="38973465-444e-4de3-87cf-338ceadc25d2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.todo-serverless/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.todo-serverless/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +108,7 @@
       <option name="presentableId" value="Default" />
       <updated>1759229827652</updated>
       <workItem from="1759229828778" duration="454000" />
-      <workItem from="1759230714741" duration="3121000" />
+      <workItem from="1759230714741" duration="3242000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit of todo-serverless application with basic CRUD functionality and AWS integration">
       <option name="closed" value="true" />
@@ -159,7 +158,23 @@
       <option name="project" value="LOCAL" />
       <updated>1759235630197</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add build and test steps to GitHub Actions workflow for .NET project">
+      <option name="closed" value="true" />
+      <created>1759235771422</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1759235771422</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add .gitignore file to exclude IDE and build artifacts">
+      <option name="closed" value="true" />
+      <created>1759235791806</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1759235791806</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,7 +190,9 @@
     <MESSAGE value="Update title in index.html to reflect testing phase" />
     <MESSAGE value="Add debug step to GitHub Actions workflow for repo structure verification" />
     <MESSAGE value="Remove redundant build and test steps from GitHub Actions workflow" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove redundant build and test steps from GitHub Actions workflow" />
+    <MESSAGE value="Add build and test steps to GitHub Actions workflow for .NET project" />
+    <MESSAGE value="Add .gitignore file to exclude IDE and build artifacts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add .gitignore file to exclude IDE and build artifacts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
