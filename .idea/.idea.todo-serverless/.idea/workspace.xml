@@ -8,7 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38973465-444e-4de3-87cf-338ceadc25d2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/permissions-policy.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trust-policy.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.todo-serverless/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.todo-serverless/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JSON File" />
         <option value="GitHub Workflow" />
+        <option value="JSON File" />
       </list>
     </option>
   </component>
@@ -44,7 +46,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/github-actions-trust-policy.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/github-actions-trust-policy.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/permissions-policy.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/src/ToDoApi/LambdaEntryPoint.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/trust-policy.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -108,7 +112,7 @@
       <option name="presentableId" value="Default" />
       <updated>1759229827652</updated>
       <workItem from="1759229828778" duration="454000" />
-      <workItem from="1759230714741" duration="3349000" />
+      <workItem from="1759230714741" duration="4770000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit of todo-serverless application with basic CRUD functionality and AWS integration">
       <option name="closed" value="true" />
@@ -182,7 +186,39 @@
       <option name="project" value="LOCAL" />
       <updated>1759235834892</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fix project path references in deployment workflow for consistency">
+      <option name="closed" value="true" />
+      <created>1759235946439</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1759235946439</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Update AWS role ARN in deployment workflow for correct permissions">
+      <option name="closed" value="true" />
+      <created>1759236091515</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1759236091515</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Fix SAM build template file reference in deployment workflow">
+      <option name="closed" value="true" />
+      <created>1759236813842</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1759236813842</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Fix case sensitivity in CodeUri path for TodoApi function">
+      <option name="closed" value="true" />
+      <created>1759236939167</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1759236939167</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,7 +237,11 @@
     <MESSAGE value="Add build and test steps to GitHub Actions workflow for .NET project" />
     <MESSAGE value="Add .gitignore file to exclude IDE and build artifacts" />
     <MESSAGE value="Update deployment workflow to use todo-serverless project files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update deployment workflow to use todo-serverless project files" />
+    <MESSAGE value="Fix project path references in deployment workflow for consistency" />
+    <MESSAGE value="Update AWS role ARN in deployment workflow for correct permissions" />
+    <MESSAGE value="Fix SAM build template file reference in deployment workflow" />
+    <MESSAGE value="Fix case sensitivity in CodeUri path for TodoApi function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix case sensitivity in CodeUri path for TodoApi function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
