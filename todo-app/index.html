@@ -219,6 +219,7 @@
 </div>
 
 <script>
+    const API_URL = "";
     let tasks = [];
 
     function showMessage(text, isError = false) {
@@ -238,7 +239,7 @@
 
     async function loadTasks() {
         try {
-            const response = await fetch('/todos');
+            const response = await fetch(`${API_URL}todos`);
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             tasks = await response.json();
             renderTasks();
@@ -278,7 +279,7 @@
 
     async function createTask(title, description, isCompleted) {
         try {
-            const response = await fetch('/todos', {
+            const response = await fetch(`${API_URL}todos`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ title, description, isCompleted })
@@ -298,7 +299,7 @@
         if (!confirm('Är du säker på att du vill ta bort denna task?')) return;
 
         try {
-            const response = await fetch(`/todos/${id}`, { method: 'DELETE' });
+            const response = await fetch(`${API_URL}todos/${id}`, { method: 'DELETE' });
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
             showMessage('Task borttagen!');
@@ -313,7 +314,7 @@
         if (!task) return;
 
         try {
-            const response = await fetch(`/todos/${id}`, {
+            const response = await fetch(`${API_URL}todos/${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

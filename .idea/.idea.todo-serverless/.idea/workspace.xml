@@ -7,9 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38973465-444e-4de3-87cf-338ceadc25d2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.todo-serverless/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.todo-serverless/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="38973465-444e-4de3-87cf-338ceadc25d2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,8 +48,9 @@
     <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/src/ToDoApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/src/ToDoApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/src/ToDoApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/ToDoApi/obj/project.assets.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/src/ToDoApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/src/ToDoApi/obj/project.assets.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/ToDoApi/obj/project.assets.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/trust-policy.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -116,7 +115,7 @@
       <option name="presentableId" value="Default" />
       <updated>1759229827652</updated>
       <workItem from="1759229828778" duration="454000" />
-      <workItem from="1759230714741" duration="13461000" />
+      <workItem from="1759230714741" duration="13768000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit of todo-serverless application with basic CRUD functionality and AWS integration">
       <option name="closed" value="true" />
@@ -470,7 +469,23 @@
       <option name="project" value="LOCAL" />
       <updated>1759245850250</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Revamp ToDo App UI with improved styling, task management features, and localization support">
+      <option name="closed" value="true" />
+      <created>1759246096199</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1759246096199</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Update ToDo App title to reflect serverless architecture">
+      <option name="closed" value="true" />
+      <created>1759246394091</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1759246394091</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -480,8 +495,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Refactor deployment script to streamline S3 bucket retrieval process" />
-    <MESSAGE value="Improve Swagger UI deployment step by adding comments for clarity" />
     <MESSAGE value="Refactor deployment script for improved readability and formatting" />
     <MESSAGE value="Refactor deployment script for improved clarity and organization" />
     <MESSAGE value="Refactor Swagger UI deployment step to retrieve bucket name from SwaggerUrl and improve clarity" />
@@ -505,7 +518,9 @@
     <MESSAGE value="Refactor deployment workflow to directly retrieve S3 bucket names from CloudFormation outputs" />
     <MESSAGE value="Revamp ToDo App UI with enhanced styling, task management features, and improved user feedback" />
     <MESSAGE value="Refactor HTML structure for improved readability and maintainability" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor HTML structure for improved readability and maintainability" />
+    <MESSAGE value="Revamp ToDo App UI with improved styling, task management features, and localization support" />
+    <MESSAGE value="Update ToDo App title to reflect serverless architecture" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update ToDo App title to reflect serverless architecture" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

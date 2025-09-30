@@ -109,6 +109,17 @@ jobs:
           echo "✅ TODO App deployed successfully!"
           echo "🌐 TODO App URL: $TODO_APP_URL"
 
+          # Invalidera CloudFront cache
+          TODO_DISTRIBUTION_ID=$(aws cloudformation describe-stacks \
+            --stack-name todo-serverless-stack \
+            --query "Stacks[0].Outputs[?OutputKey=='TodoAppDistributionId'].OutputValue" \
+            --output text)
+
+          echo "🔄 Invalidating CloudFront cache for distribution: $TODO_DISTRIBUTION_ID"
+          aws cloudfront create-invalidation \
+            --distribution-id $TODO_DISTRIBUTION_ID \
+            --paths "/*"
+
       - name: Deploy Swagger UI to S3
         if: github.ref == 'refs/heads/main'
         run: |
@@ -143,6 +154,17 @@ jobs:
 
           echo "📄 Swagger UI deployed successfully!"
           echo "🌐 Swagger URL: $SWAGGER_URL"
+
+          # Invalidera CloudFront cache
+          SWAGGER_DISTRIBUTION_ID=$(aws cloudformation describe-stacks \
+            --stack-name todo-serverless-stack \
+            --query "Stacks[0].Outputs[?OutputKey=='SwaggerDistributionId'].OutputValue" \
+            --output text)
+
+          echo "🔄 Invalidating CloudFront cache for distribution: $SWAGGER_DISTRIBUTION_ID"
+          aws cloudfront create-invalidation \
+            --distribution-id $SWAGGER_DISTRIBUTION_ID \
+            --paths "/*"
 
       - name: API Health Check
         if: github.ref == 'refs/heads/main'
