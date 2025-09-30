@@ -168,7 +168,7 @@ app.MapGet("/health", async () =>
     }
 });
 
-// Explicit IPv4 binding för ALB health checks
+// Explicit IPv4 binding för ALB health checks 
 app.Run();
 
 // Lambda hosting support
