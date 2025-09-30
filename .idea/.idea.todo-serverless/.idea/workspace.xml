@@ -8,21 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38973465-444e-4de3-87cf-338ceadc25d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.todo-serverless/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.todo-serverless/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoApi/LambdaEntryPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/LambdaEntryPoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/Debug/net9.0/todo-serverless.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/Debug/net9.0/todo-serverless.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/Debug/net9.0/todo-serverless.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/Debug/net9.0/todo-serverless.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/Debug/net9.0/todo-serverless.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/Debug/net9.0/todo-serverless.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/Debug/net9.0/todo-serverless.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/Debug/net9.0/todo-serverless.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/todo-serverless.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/todo-serverless.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoApi/todo-serverless.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/todo-serverless.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/swagger-ui/swagger-init.js" beforeDir="false" afterPath="$PROJECT_DIR$/swagger-ui/swagger-init.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +45,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/github-actions-trust-policy.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/github-actions-trust-policy.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/src/ToDoApi/LambdaEntryPoint.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -121,7 +109,7 @@
       <option name="presentableId" value="Default" />
       <updated>1759229827652</updated>
       <workItem from="1759229828778" duration="454000" />
-      <workItem from="1759230714741" duration="2444000" />
+      <workItem from="1759230714741" duration="3121000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit of todo-serverless application with basic CRUD functionality and AWS integration">
       <option name="closed" value="true" />
@@ -131,7 +119,47 @@
       <option name="project" value="LOCAL" />
       <updated>1759231533476</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add GitHub Actions workflow for AWS deployment and update project dependencies">
+      <option name="closed" value="true" />
+      <created>1759235133423</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1759235133423</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Initialize serverless application with AWS integration and basic configuration files">
+      <option name="closed" value="true" />
+      <created>1759235146016</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1759235146016</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Update title in index.html to reflect testing phase">
+      <option name="closed" value="true" />
+      <created>1759235325792</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1759235325792</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add debug step to GitHub Actions workflow for repo structure verification">
+      <option name="closed" value="true" />
+      <created>1759235514061</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1759235514061</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Remove redundant build and test steps from GitHub Actions workflow">
+      <option name="closed" value="true" />
+      <created>1759235630197</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1759235630197</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,7 +170,12 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="initial commit of todo-serverless application with basic CRUD functionality and AWS integration" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit of todo-serverless application with basic CRUD functionality and AWS integration" />
+    <MESSAGE value="Add GitHub Actions workflow for AWS deployment and update project dependencies" />
+    <MESSAGE value="Initialize serverless application with AWS integration and basic configuration files" />
+    <MESSAGE value="Update title in index.html to reflect testing phase" />
+    <MESSAGE value="Add debug step to GitHub Actions workflow for repo structure verification" />
+    <MESSAGE value="Remove redundant build and test steps from GitHub Actions workflow" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove redundant build and test steps from GitHub Actions workflow" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -37,6 +37,18 @@ jobs:
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
       
+      # 3. Restore och build
+      - name: Restore dependencies
+        run: dotnet restore src/TodoApi/TodoApi.csproj
+
+      - name: Build
+        run: dotnet build src/TodoApi/TodoApi.csproj --configuration Release --no-restore
+
+      # 4. Tester (om du har några)
+      - name: Run tests
+        if: hashFiles('src/TodoApi.Tests/**') != ''
+        run: dotnet test src/TodoApi.Tests/TodoApi.Tests.csproj --no-build --verbosity normal
+        
       # 5. Configure AWS credentials via OIDC
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
