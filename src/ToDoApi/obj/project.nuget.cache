@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "IUYSaMleyj0=",
+  "dgSpecHash": "b+Iwii6xdOU=",
   "success": true,
   "projectFilePath": "/Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/src/ToDoApi/todo-serverless.csproj",
   "expectedPackageFiles": [
@@ -15,7 +15,7 @@
     "/Users/mans/.nuget/packages/awssdk.core/4.0.0.30/awssdk.core.4.0.0.30.nupkg.sha512",
     "/Users/mans/.nuget/packages/awssdk.dynamodbv2/4.0.6.4/awssdk.dynamodbv2.4.0.6.4.nupkg.sha512",
     "/Users/mans/.nuget/packages/awssdk.extensions.netcore.setup/4.0.3.2/awssdk.extensions.netcore.setup.4.0.3.2.nupkg.sha512",
-    "/Users/mans/.nuget/packages/microsoft.aspnetcore.openapi/8.0.0/microsoft.aspnetcore.openapi.8.0.0.nupkg.sha512",
+    "/Users/mans/.nuget/packages/microsoft.aspnetcore.openapi/8.0.20/microsoft.aspnetcore.openapi.8.0.20.nupkg.sha512",
     "/Users/mans/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "/Users/mans/.nuget/packages/microsoft.extensions.configuration.abstractions/8.0.0/microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "/Users/mans/.nuget/packages/microsoft.extensions.configuration.binder/8.0.0/microsoft.extensions.configuration.binder.8.0.0.nupkg.sha512",

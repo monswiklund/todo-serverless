@@ -8,13 +8,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38973465-444e-4de3-87cf-338ceadc25d2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.todo-serverless/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.todo-serverless/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToDoApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/todo-serverless.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/todo-serverless.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/todo-serverless.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/todo-serverless.csproj.nuget.g.targets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ToDoApi/todo-serverless.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/todo-serverless.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +121,7 @@
       <option name="presentableId" value="Default" />
       <updated>1759229827652</updated>
       <workItem from="1759229828778" duration="454000" />
-      <workItem from="1759230714741" duration="7573000" />
+      <workItem from="1759230714741" duration="7922000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit of todo-serverless application with basic CRUD functionality and AWS integration">
       <option name="closed" value="true" />
@@ -338,7 +339,31 @@
       <option name="project" value="LOCAL" />
       <updated>1759240132574</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Update package versions for compatibility with 8.0.x">
+      <option name="closed" value="true" />
+      <created>1759240187029</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1759240187029</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Update package references to specific versions for compatibility with 8.0.x">
+      <option name="closed" value="true" />
+      <created>1759240220861</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1759240220861</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Update package references to version 8.0.x for compatibility">
+      <option name="closed" value="true" />
+      <created>1759240274180</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1759240274180</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,7 +373,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="initial commit of todo-serverless application with basic CRUD functionality and AWS integration" />
     <MESSAGE value="Add GitHub Actions workflow for AWS deployment and update project dependencies" />
     <MESSAGE value="Initialize serverless application with AWS integration and basic configuration files" />
     <MESSAGE value="Update title in index.html to reflect testing phase" />
@@ -370,9 +394,11 @@
     <MESSAGE value="Refactor Swagger UI deployment step to retrieve bucket name from SwaggerUrl and improve clarity" />
     <MESSAGE value="Refactor Swagger UI deployment step for improved readability" />
     <MESSAGE value="Update target framework from net9.0 to net8.0 for compatibility" />
-    <MESSAGE value="Update package references to version 8.0.x for compatibility" />
     <MESSAGE value="Update package references to specific versions for compatibility" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update package references to specific versions for compatibility" />
+    <MESSAGE value="Update package versions for compatibility with 8.0.x" />
+    <MESSAGE value="Update package references to specific versions for compatibility with 8.0.x" />
+    <MESSAGE value="Update package references to version 8.0.x for compatibility" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update package references to version 8.0.x for compatibility" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

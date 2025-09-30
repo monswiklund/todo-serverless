@@ -4,6 +4,7 @@ using Amazon.DynamoDBv2.DataModel;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.OpenApi;
 using Serilog;
 using todo_serverless.Models;
 using todo_serverless.wwwroot.Services;
@@ -20,8 +21,8 @@ builder.Host.UseSerilog((context, services, configuration) =>
         .WriteTo.Console();
 });
 
-// Swagger för API-dokumentation
-builder.Services.AddOpenApi();
+
+
 
 // Rate limiting - 100 requests per minut per IP
 builder.Services.AddRateLimiter(options =>
@@ -62,6 +63,8 @@ builder.Services.AddSingleton<IDynamoDBContext>(provider =>
 });
 
 builder.Services.AddScoped<TaskService>();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
@@ -71,7 +74,7 @@ app.UseSerilogRequestLogging();
 // Aktivera rate limiting
 app.UseRateLimiter();
 
-app.MapOpenApi();
+app.UseSwagger();
 app.UseSwaggerUI(options => { options.SwaggerEndpoint("/openapi/v1.json", "v1"); });
 
 // Serve static files från wwwroot
