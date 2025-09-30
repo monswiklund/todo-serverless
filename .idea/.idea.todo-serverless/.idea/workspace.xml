@@ -9,14 +9,7 @@
   <component name="ChangeListManager">
     <list default="true" id="38973465-444e-4de3-87cf-338ceadc25d2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.todo-serverless/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.todo-serverless/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/todo-serverless.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/todo-serverless.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ToDoApi/todo-serverless.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/todo-serverless.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template.yml" beforeDir="false" afterPath="$PROJECT_DIR$/template.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +48,7 @@
     <setting file="file://$PROJECT_DIR$/permissions-policy.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/permissions-policy.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/src/ToDoApi/LambdaEntryPoint.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/src/ToDoApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/ToDoApi/obj/project.assets.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/src/ToDoApi/obj/project.assets.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/trust-policy.json" root0="FORCE_HIGHLIGHTING" />
@@ -121,7 +115,7 @@
       <option name="presentableId" value="Default" />
       <updated>1759229827652</updated>
       <workItem from="1759229828778" duration="454000" />
-      <workItem from="1759230714741" duration="7922000" />
+      <workItem from="1759230714741" duration="8254000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit of todo-serverless application with basic CRUD functionality and AWS integration">
       <option name="closed" value="true" />
@@ -363,7 +357,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759240274180</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Update Microsoft.AspNetCore.OpenApi package to version 8.0.20 and configure Swagger services">
+      <option name="closed" value="true" />
+      <created>1759240535336</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1759240535336</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,7 +375,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Add GitHub Actions workflow for AWS deployment and update project dependencies" />
     <MESSAGE value="Initialize serverless application with AWS integration and basic configuration files" />
     <MESSAGE value="Update title in index.html to reflect testing phase" />
     <MESSAGE value="Add debug step to GitHub Actions workflow for repo structure verification" />
@@ -398,7 +399,8 @@
     <MESSAGE value="Update package versions for compatibility with 8.0.x" />
     <MESSAGE value="Update package references to specific versions for compatibility with 8.0.x" />
     <MESSAGE value="Update package references to version 8.0.x for compatibility" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update package references to version 8.0.x for compatibility" />
+    <MESSAGE value="Update Microsoft.AspNetCore.OpenApi package to version 8.0.20 and configure Swagger services" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Microsoft.AspNetCore.OpenApi package to version 8.0.20 and configure Swagger services" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
