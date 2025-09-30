@@ -185,78 +185,78 @@
     </style>
 </head>
 <body>
-    <h1>ToDo App</h1>
+<h1>ToDo App</h1>
 
-    <div id="message-container"></div>
+<div id="message-container"></div>
 
-    <div class="container">
-        <h2>Skapa ny task</h2>
-        <form id="create-form">
-            <div class="form-group">
-                <label>Titel</label>
-                <input type="text" id="create-title" required>
-            </div>
-            <div class="form-group">
-                <label>Beskrivning</label>
-                <textarea id="create-description"></textarea>
-            </div>
-            <div class="form-group checkbox-group">
-                <input type="checkbox" id="create-completed">
-                <label for="create-completed" style="margin: 0;">Färdig</label>
-            </div>
-            <button type="submit" class="btn-primary">Skapa task</button>
-        </form>
-    </div>
+<div class="container">
+    <h2>Skapa ny task</h2>
+    <form id="create-form">
+        <div class="form-group">
+            <label>Titel</label>
+            <input type="text" id="create-title" required>
+        </div>
+        <div class="form-group">
+            <label>Beskrivning</label>
+            <textarea id="create-description"></textarea>
+        </div>
+        <div class="form-group checkbox-group">
+            <input type="checkbox" id="create-completed">
+            <label for="create-completed" style="margin: 0;">Färdig</label>
+        </div>
+        <button type="submit" class="btn-primary">Skapa task</button>
+    </form>
+</div>
 
-    <div class="container">
-        <h2>Tasks</h2>
-        <div id="tasks-list">Laddar...</div>
-    </div>
+<div class="container">
+    <h2>Tasks</h2>
+    <div id="tasks-list">Laddar...</div>
+</div>
 
-    <div class="api-links">
-        <a href="/swagger" target="_blank">API Documentation (Swagger)</a> |
-        <a href="/todos" target="_blank">Raw JSON Data</a>
-    </div>
+<div class="api-links">
+    <a href="/swagger" target="_blank">API Documentation (Swagger)</a> |
+    <a href="/todos" target="_blank">Raw JSON Data</a>
+</div>
 
-    <script>
-        let tasks = [];
+<script>
+    let tasks = [];
 
-        function showMessage(text, isError = false) {
-            const container = document.getElementById('message-container');
-            const div = document.createElement('div');
-            div.className = `message ${isError ? 'error' : 'success'}`;
-            div.textContent = text;
-            container.appendChild(div);
-            setTimeout(() => div.remove(), 5000);
+    function showMessage(text, isError = false) {
+        const container = document.getElementById('message-container');
+        const div = document.createElement('div');
+        div.className = `message ${isError ? 'error' : 'success'}`;
+        div.textContent = text;
+        container.appendChild(div);
+        setTimeout(() => div.remove(), 5000);
+    }
+
+    function escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+
+    async function loadTasks() {
+        try {
+            const response = await fetch('/todos');
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+            tasks = await response.json();
+            renderTasks();
+        } catch (error) {
+            document.getElementById('tasks-list').innerHTML =
+                `<div class="message error">Fel vid laddning: ${error.message}</div>`;
+        }
+    }
+
+    function renderTasks() {
+        const container = document.getElementById('tasks-list');
+
+        if (tasks.length === 0) {
+            container.innerHTML = '<p>Inga tasks än.</p>';
+            return;
         }
 
-        function escapeHtml(text) {
-            const div = document.createElement('div');
-            div.textContent = text;
-            return div.innerHTML;
-        }
-
-        async function loadTasks() {
-            try {
-                const response = await fetch('/todos');
-                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                tasks = await response.json();
-                renderTasks();
-            } catch (error) {
-                document.getElementById('tasks-list').innerHTML =
-                    `<div class="message error">Fel vid laddning: ${error.message}</div>`;
-            }
-        }
-
-        function renderTasks() {
-            const container = document.getElementById('tasks-list');
-
-            if (tasks.length === 0) {
-                container.innerHTML = '<p>Inga tasks än.</p>';
-                return;
-            }
-
-            container.innerHTML = tasks.map(task => `
+        container.innerHTML = tasks.map(task => `
                 <div class="task">
                     <div class="task-content">
                         <div class="task-title">${escapeHtml(task.title)}</div>
@@ -274,75 +274,75 @@
                     </div>
                 </div>
             `).join('');
+    }
+
+    async function createTask(title, description, isCompleted) {
+        try {
+            const response = await fetch('/todos', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ title, description, isCompleted })
+            });
+
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+            showMessage('Task skapad!');
+            await loadTasks();
+            document.getElementById('create-form').reset();
+        } catch (error) {
+            showMessage(`Fel vid skapande: ${error.message}`, true);
         }
+    }
 
-        async function createTask(title, description, isCompleted) {
-            try {
-                const response = await fetch('/todos', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ title, description, isCompleted })
-                });
+    async function deleteTask(id) {
+        if (!confirm('Är du säker på att du vill ta bort denna task?')) return;
 
-                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        try {
+            const response = await fetch(`/todos/${id}`, { method: 'DELETE' });
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
-                showMessage('Task skapad!');
-                await loadTasks();
-                document.getElementById('create-form').reset();
-            } catch (error) {
-                showMessage(`Fel vid skapande: ${error.message}`, true);
-            }
+            showMessage('Task borttagen!');
+            await loadTasks();
+        } catch (error) {
+            showMessage(`Fel vid borttagning: ${error.message}`, true);
         }
+    }
 
-        async function deleteTask(id) {
-            if (!confirm('Är du säker på att du vill ta bort denna task?')) return;
+    async function toggleComplete(id, isCompleted) {
+        const task = tasks.find(t => t.id === id);
+        if (!task) return;
 
-            try {
-                const response = await fetch(`/todos/${id}`, { method: 'DELETE' });
-                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        try {
+            const response = await fetch(`/todos/${id}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    title: task.title,
+                    description: task.description,
+                    isCompleted: isCompleted
+                })
+            });
 
-                showMessage('Task borttagen!');
-                await loadTasks();
-            } catch (error) {
-                showMessage(`Fel vid borttagning: ${error.message}`, true);
-            }
+            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+            showMessage('Task uppdaterad!');
+            await loadTasks();
+        } catch (error) {
+            showMessage(`Fel vid uppdatering: ${error.message}`, true);
         }
+    }
 
-        async function toggleComplete(id, isCompleted) {
-            const task = tasks.find(t => t.id === id);
-            if (!task) return;
+    document.getElementById('create-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        createTask(
+            document.getElementById('create-title').value,
+            document.getElementById('create-description').value,
+            document.getElementById('create-completed').checked
+        );
+    });
 
-            try {
-                const response = await fetch(`/todos/${id}`, {
-                    method: 'PUT',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        title: task.title,
-                        description: task.description,
-                        isCompleted: isCompleted
-                    })
-                });
-
-                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-
-                showMessage('Task uppdaterad!');
-                await loadTasks();
-            } catch (error) {
-                showMessage(`Fel vid uppdatering: ${error.message}`, true);
-            }
-        }
-
-        document.getElementById('create-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            createTask(
-                document.getElementById('create-title').value,
-                document.getElementById('create-description').value,
-                document.getElementById('create-completed').checked
-            );
-        });
-
-        loadTasks();
-        setInterval(loadTasks, 30000);
-    </script>
+    loadTasks();
+    setInterval(loadTasks, 30000);
+</script>
 </body>
 </html>
