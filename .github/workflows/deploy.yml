@@ -64,7 +64,7 @@ jobs:
       
       # 7. Build SAM application
       - name: SAM Build
-        run: sam build --template-file template.yaml
+        run: sam build --template-file template.yml
       
       # 8. Deploy till AWS (endast på main branch)
       - name: SAM Deploy
