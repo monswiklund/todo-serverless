@@ -53,7 +53,7 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::123456789012:role/GitHubActionsDeployRole
+          role-to-assume: arn:aws:iam::506279660688:role/GitHubActionsDeployRole
           aws-region: ${{ env.AWS_REGION }}
       
       # 6. Setup AWS SAM CLI
