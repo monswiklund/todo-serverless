@@ -21,6 +21,12 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      
+      - name: Debug repo structure
+        run: |
+          pwd
+          ls -R
+      
       # 1. Checkout kod från GitHub
       - name: Checkout code
         uses: actions/checkout@v4
