@@ -94,7 +94,6 @@ jobs:
       - name: Deploy Swagger UI to S3
         if: github.ref == 'refs/heads/main'
         run: |
-        # Hämta bucket från CloudFormation
         BUCKET_NAME=$(aws cloudformation describe-stacks \
           --stack-name todo-serverless-stack \
           --query "Stacks[0].Outputs[?OutputKey=='DeploymentBucket'].OutputValue" \
