@@ -7,7 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38973465-444e-4de3-87cf-338ceadc25d2" name="Changes" comment="" />
+    <list default="true" id="38973465-444e-4de3-87cf-338ceadc25d2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.todo-serverless/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.todo-serverless/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,6 +45,7 @@
     <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/github-actions-trust-policy.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/permissions-policy.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/permissions-policy.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/src/ToDoApi/LambdaEntryPoint.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/src/ToDoApi/LambdaEntryPoint.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/src/ToDoApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/src/ToDoApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
@@ -113,7 +116,7 @@
       <option name="presentableId" value="Default" />
       <updated>1759229827652</updated>
       <workItem from="1759229828778" duration="454000" />
-      <workItem from="1759230714741" duration="9847000" />
+      <workItem from="1759230714741" duration="10579000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit of todo-serverless application with basic CRUD functionality and AWS integration">
       <option name="closed" value="true" />
@@ -411,7 +414,23 @@
       <option name="project" value="LOCAL" />
       <updated>1759242440032</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Implement CRUD operations and Swagger integration in LambdaEntryPoint">
+      <option name="closed" value="true" />
+      <created>1759242782249</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1759242782249</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Add CORS support to allow frontend API access in LambdaEntryPoint">
+      <option name="closed" value="true" />
+      <created>1759243048619</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1759243048619</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,8 +440,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Update deployment workflow to use todo-serverless project files" />
-    <MESSAGE value="Fix project path references in deployment workflow for consistency" />
     <MESSAGE value="Update AWS role ARN in deployment workflow for correct permissions" />
     <MESSAGE value="Fix SAM build template file reference in deployment workflow" />
     <MESSAGE value="Fix case sensitivity in CodeUri path for TodoApi function" />
@@ -446,7 +463,9 @@
     <MESSAGE value="Fix comment formatting for explicit IPv4 binding in Program.cs" />
     <MESSAGE value="Add deployment steps for TODO App and update S3 bucket policies" />
     <MESSAGE value="Update DynamoDB hash key attribute name for Id property in TodoTask" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update DynamoDB hash key attribute name for Id property in TodoTask" />
+    <MESSAGE value="Implement CRUD operations and Swagger integration in LambdaEntryPoint" />
+    <MESSAGE value="Add CORS support to allow frontend API access in LambdaEntryPoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add CORS support to allow frontend API access in LambdaEntryPoint" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
