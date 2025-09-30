@@ -58,7 +58,7 @@
             },
             "Amazon.Lambda.Core": {
               "target": "Package",
-              "version": "[2.2.*, )"
+              "version": "[2.5.*, )"
             },
             "Amazon.Lambda.Serialization.SystemTextJson": {
               "target": "Package",
@@ -88,12 +88,23 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[9.0.8, 9.0.8]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
           "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
         }
       }
     }

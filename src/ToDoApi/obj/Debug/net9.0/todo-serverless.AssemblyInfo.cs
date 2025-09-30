@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("todo-serverless")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+95a42190b52be862ea2893fb6d4be3a24ebf5475")]
 [assembly: System.Reflection.AssemblyProductAttribute("todo-serverless")]
 [assembly: System.Reflection.AssemblyTitleAttribute("todo-serverless")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
