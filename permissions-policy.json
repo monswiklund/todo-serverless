@@ -8,6 +8,7 @@
         "lambda:*",
         "apigateway:*",
         "s3:*",
+        "iam:GetRole",
         "iam:PassRole"
       ],
       "Resource": "*"
