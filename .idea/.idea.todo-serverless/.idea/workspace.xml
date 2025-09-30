@@ -7,9 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38973465-444e-4de3-87cf-338ceadc25d2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/template.yml" beforeDir="false" afterPath="$PROJECT_DIR$/template.yml" afterDir="false" />
-    </list>
+    <list default="true" id="38973465-444e-4de3-87cf-338ceadc25d2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +44,7 @@
     <setting file="file://$PROJECT_DIR$/permissions-policy.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/permissions-policy.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/src/ToDoApi/LambdaEntryPoint.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/src/ToDoApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/src/ToDoApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/mans/Skola/yh/ht25/8-skalbara-molnapp/inlämning-2/todo-serverless/src/ToDoApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/ToDoApi/obj/project.assets.json" root0="FORCE_HIGHLIGHTING" />
@@ -114,7 +113,7 @@
       <option name="presentableId" value="Default" />
       <updated>1759229827652</updated>
       <workItem from="1759229828778" duration="454000" />
-      <workItem from="1759230714741" duration="9312000" />
+      <workItem from="1759230714741" duration="9847000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit of todo-serverless application with basic CRUD functionality and AWS integration">
       <option name="closed" value="true" />
@@ -396,7 +395,23 @@
       <option name="project" value="LOCAL" />
       <updated>1759241749125</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Add deployment steps for TODO App and update S3 bucket policies">
+      <option name="closed" value="true" />
+      <created>1759242164498</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1759242164498</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Update DynamoDB hash key attribute name for Id property in TodoTask">
+      <option name="closed" value="true" />
+      <created>1759242440032</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1759242440032</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,8 +421,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Add build and test steps to GitHub Actions workflow for .NET project" />
-    <MESSAGE value="Add .gitignore file to exclude IDE and build artifacts" />
     <MESSAGE value="Update deployment workflow to use todo-serverless project files" />
     <MESSAGE value="Fix project path references in deployment workflow for consistency" />
     <MESSAGE value="Update AWS role ARN in deployment workflow for correct permissions" />
@@ -431,7 +444,9 @@
     <MESSAGE value="Refactor deployment configuration and update API integration for Swagger UI" />
     <MESSAGE value="Remove unused Init method in LambdaEntryPoint and update workspace.xml for task tracking" />
     <MESSAGE value="Fix comment formatting for explicit IPv4 binding in Program.cs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix comment formatting for explicit IPv4 binding in Program.cs" />
+    <MESSAGE value="Add deployment steps for TODO App and update S3 bucket policies" />
+    <MESSAGE value="Update DynamoDB hash key attribute name for Id property in TodoTask" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update DynamoDB hash key attribute name for Id property in TodoTask" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
