@@ -8,7 +8,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38973465-444e-4de3-87cf-338ceadc25d2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/deploy.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/Debug/net9.0/todo-serverless.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/Debug/net9.0/todo-serverless.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/Debug/net9.0/todo-serverless.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/Debug/net9.0/todo-serverless.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/todo-serverless.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/todo-serverless.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/todo-serverless.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/todo-serverless.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToDoApi/obj/todo-serverless.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/obj/todo-serverless.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToDoApi/todo-serverless.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToDoApi/todo-serverless.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +122,7 @@
       <option name="presentableId" value="Default" />
       <updated>1759229827652</updated>
       <workItem from="1759229828778" duration="454000" />
-      <workItem from="1759230714741" duration="7205000" />
+      <workItem from="1759230714741" duration="7374000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit of todo-serverless application with basic CRUD functionality and AWS integration">
       <option name="closed" value="true" />
@@ -307,7 +316,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759239742472</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Update target framework from net9.0 to net8.0 for compatibility">
+      <option name="closed" value="true" />
+      <created>1759239812345</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1759239812345</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
